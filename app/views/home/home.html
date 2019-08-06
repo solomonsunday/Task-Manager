@@ -1,0 +1,30 @@
+  <div class="btnplacing">
+      <div>
+
+         <!-- <button type="button" id="addbtn" class="addbtn">ELM</button> -->
+         <div ng-repeat="task in vm.tasks" class="taskTable">
+            <button type="button" id="addbtn" ui-sref="index.task" class="addbtn">{{task}}</button>
+         </div>
+          
+           <button type="button" name="titleText" id="myBtn" class="addbtn"> Add Task</button>
+
+    </div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <div class="modal-content modalStyle" >
+    <h2 class="modalStyle">Create Board Name</h2>
+    <!-- <span class="close">&times;</span> -->
+    <input class="modalStyle inputbox" type="text" id="boardname" placeholder="Enter Board Name">
+    <div class="modalBtn">
+       <button type="button" style="color:green;" ng-click="vm.saveBoard()">Save</button>
+        <button type="button" style="color:red" ng-click="vm.close()">Cancel</button>
+    </div>
+   
+
+  </div>
+
+</div>
+
+  </div>
