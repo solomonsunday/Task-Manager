@@ -1,19 +1,23 @@
 *{
   color:white;
 }
+body{
+  background: url("/images/brickwall.jpg") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
 .mainContent {
   width: 80%;
   margin-left: 10%;
-  margin-right: 10%;
-  background-color: #666666;
+  
 }
 .addbtn {
-  margin-top: 10vh;
+  margin: 5vh;
   margin-left: 5vw;
   padding: 40px;
   color: rgb(160, 156, 95);
   background-color:green;
-  font: 100;
+  font: bolder;
 }
 .pagetitle {
   background-color: maroon;
@@ -21,17 +25,10 @@
   padding: 10px;
 }
 
-.btnplacing {
+.container {
   display: inline-block;
 }
-.taskTable {
-  table-layout: auto;
-  border: 1px solid black;
-  margin-top: 10vh;
-  width: -webkit-fill-available;
-  text-align: -webkit-match-parent;
-  border-collapse: collapse;
-}
+
 
 .th.theader {
   text-align: inherit;
@@ -62,10 +59,23 @@
   padding: 4px;
 }
 
-.footer{
-background-color: black;
-margin-top: 10px;
-width: 80%;
+
+/* Footer Styles */
+
+
+/* .footer {
+
+  width: 100%;
+  background-color: red;
+  color: white;
+} */
+
+.mainFooter{
+  min-height: calc(100vh - 0px);
+  background-color: maroon;
+  text-align: center;
+  padding: 20px;
+  
 }
 
 .modalStyle{
@@ -77,9 +87,7 @@ width: 80%;
   margin-left: 35%;
   padding: inherit;
 }
-.mainFooter{
-  min-height: calc(100vh - 0px);
-}
+
 
 input{
   display: block;
@@ -127,6 +135,47 @@ input{
   margin-top: 4vh;
 } 
 
-.taskTable{
+/* ######################## BOARD TABLE STYLES############################################## */
+.boardTable{
   display: contents;
 }
+
+.boardTable {
+  table-layout: auto;
+  border: 1px solid black;
+  margin-top: 10vh;
+  width: -webkit-fill-available;
+  text-align: -webkit-match-parent;
+  border-collapse: collapse;
+}
+
+/*############################################# Task Table Design ############################*/
+#taskTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px;
+
+}
+
+#taskTable td, #taskTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#taskTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#taskTable tr:hover {background-color: lightslategrey;}
+
+#taskTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+
+

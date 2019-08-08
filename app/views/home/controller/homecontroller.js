@@ -4,8 +4,6 @@
     angular.module ("taskApp").controller("homeCtrl", ["$scope", "$state", function($scope, $state){
 
       var vm = this;
-
-      //_getTask();
       vm.tasks = [];
 
 // Get the modal
