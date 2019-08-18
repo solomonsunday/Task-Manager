@@ -507,7 +507,7 @@ $document.ready(function () {
 					"stylers": [{
 						"visibility": "on"
 					}, {
-						"color": "#ffffff"
+						"color": ""
 					}, {
 						"weight": 1.8
 					}]
@@ -535,13 +535,13 @@ $document.ready(function () {
 					"featureType": "road.arterial",
 					"elementType": "geometry.fill",
 					"stylers": [{
-						"color": "#ffffff"
+						"color": ""
 					}]
 				}, {
 					"featureType": "road.arterial",
 					"elementType": "geometry.fill",
 					"stylers": [{
-						"color": "#ffffff"
+						"color": ""
 					}]
 				}, {
 					"featureType": "landscape",

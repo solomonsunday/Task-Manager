@@ -1,33 +1,99 @@
   <div class="mainContent">
 
-    <div class="float-btn-div">
-      <div>
-         <a href="#" button class="" ><span><i class="fa fa-print fa-2x"></i> </span> Save</button> </a>
-      </div>
-      <div>
-             <a href="#" button class="float-btn-div" ><span><i class="fa fa-print fa-2x"></i> </span> Delete</button> </a>
+    <!-- <div class="float-btn-div">
+              <div>
+                  <a href="#" button class="savebtn" ><span><i class="fa fa-print fa-2x"></i> </span> Save</button> </a>
+              </div>
+              <div>
+                      <a href="#" button class="deleteBtn" ><span><i class="fa fa-print fa-2x"></i> </span> Delete</button> </a>
+            
+              </div>
+              <div>
+                  <a href="#" button class="backBtn" ><span><i class="fa fa-print fa-2x"></i> </span> Back</button> </a>
+              </div>
+    </div> -->
+
+    <div class="formcontainer">
+<!--            
+<form class="card">
+  <div class="form-content">
+    <div class="class">
+    <h1 class="form-title">Write Down Your Error List</h1>
+    <label for="email"><b>Error</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Assign</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <hr>
+
+    <button type="submit" class="registerbtn">Save</button>
+  </div>
+  </div>
+  
+ 
+</form> -->
+
+<form>
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">Assigned To</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" ng-model ="formData.assignedTo" placeholder="Error Is Assign to..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Priority Level</label>
+    </div>
+    <div class="col-75">
+      <select id="Priority" ng-model ="formData.PriorityLevel" name="Priority">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="low">low</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Error Details</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" ng-model ="formData.ErrorDetail" placeholder="Write Error.." style="height:100px"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <input type="save" value="Save">
+  </div>
+</form>
+
+<hr>
+   
     
-      </div>
-      <div>
-         <a href="#" button class="float-btn-div" ><span><i class="fa fa-print fa-2x"></i> </span> Back</button> </a>
-      </div>
     </div>
       <div>
         <table id="taskTable">
           <thead>
             <tr>
               <th>S/N</th>
-              <th> Task</th>
+              <th> Error Detail</th>
               <th> Assigned To</th>
               <th> Priority Level</th>
+              <th> Action</th>
+
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>1.</td>
-              <td>Remove the modal from the invoice</td>
-              <td>Solomon shall take up the task</td>
-              <td>High priority</td>
+              <td>{{$index+1}}</td>
+              <td>{{formData.ErrorDetail}}</td>
+              <td>{{formData.assignedTo}}</td>
+              <td>{{formData.PriorityLevel}}</td>
+              <td>&nsub;</td>
+
             </tr>
           </tbody>
         </table>

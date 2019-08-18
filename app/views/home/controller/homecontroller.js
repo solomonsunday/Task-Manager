@@ -35,7 +35,11 @@ window.onclick = function(event) {
 
 vm.saveBoard = function(){
   var modalInput = document.getElementById("boardname");
-  vm.tasks.push(modalInput.value);  
+  vm.tasks.push(modalInput.value); 
+  if (boardname !== null){
+    alert("Enter a Projecr Name");
+    brake();
+  } 
   modalInput.value = "";
 }
 
